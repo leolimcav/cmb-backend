@@ -7,7 +7,7 @@
     "start": "node src/index.js",
     "dev": "nodemon src/server.js --ignore __tests__",
     "pretest": "NODE_ENV=test sequelize db:migrate",
-    "test": "NODE_ENV=test jest",
+    "test": "NODE_ENV=test jest --passWithNoTests",
     "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
   },
   "husky": {
@@ -20,6 +20,7 @@
   "lint-staged": {
     "*.js": [
       "eslint --fix",
+      "yarn test",
       "git add"
     ]
   },
