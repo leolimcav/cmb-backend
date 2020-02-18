@@ -15,7 +15,8 @@ class ShippingCompany extends Model {
   }
 
   static associate(models) {
-    this.hasMany(models.Driver, { foreignKey: 'id', as: 'driver' });
+    this.hasMany(models.Driver, { foreignKey: 'id', as: 'drivers' });
+    this.hasMany(models.Parcel, { foreignKey: 'id', as: 'parcels' });
   }
 }
 

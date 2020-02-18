@@ -14,6 +14,7 @@ class Driver extends Model {
 
   static associate(models) {
     this.belongsTo(models.ShippingCompany, { foreignKey: 'id', as: 'company' });
+    this.hasMany(models.Parcel, { foreignKey: 'id', as: 'parcel' });
   }
 }
 

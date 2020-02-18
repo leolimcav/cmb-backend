@@ -3,8 +3,9 @@ import databaseConfig from '../config/database';
 
 import ShippingCompany from '../app/models/ShippingCompany';
 import Driver from '../app/models/Driver';
+import Parcel from '../app/models/Parcel';
 
-const models = [ShippingCompany, Driver];
+const models = [ShippingCompany, Driver, Parcel];
 
 class Database {
   constructor() {
