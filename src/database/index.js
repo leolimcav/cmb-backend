@@ -2,8 +2,9 @@ import Sequelize from 'sequelize';
 import databaseConfig from '../config/database';
 
 import ShippingCompany from '../app/models/ShippingCompany';
+import Driver from '../app/models/Driver';
 
-const models = [ShippingCompany];
+const models = [ShippingCompany, Driver];
 
 class Database {
   constructor() {

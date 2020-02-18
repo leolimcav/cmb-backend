@@ -14,9 +14,9 @@ class ShippingCompany extends Model {
     );
   }
 
-  // static associate(models) {
-  //   this.belongsTo(models.File, { foreignKey: 'avatar_id', as: 'avatar' });
-  // }
+  static associate(models) {
+    this.hasMany(models.Driver, { foreignKey: 'id', as: 'driver' });
+  }
 }
 
 export default ShippingCompany;
