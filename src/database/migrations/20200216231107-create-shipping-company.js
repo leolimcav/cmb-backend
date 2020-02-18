@@ -5,35 +5,35 @@ module.exports = {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
-        isNull: false,
+        allowNull: false,
       },
       fancy_name: {
         type: Sequelize.STRING,
-        isNull: false,
+        allowNull: false,
       },
       cnpj: {
         type: Sequelize.STRING(14),
-        isNull: false,
+        allowNull: false,
       },
       email: {
         type: Sequelize.STRING,
-        isNull: false,
+        allowNull: false,
       },
       phone_1: {
         type: Sequelize.STRING(11),
-        isNull: false,
+        allowNull: false,
       },
       phone_2: {
         type: Sequelize.STRING(11),
-        isNull: true,
+        allowNull: true,
       },
       created_at: {
         type: Sequelize.DATE,
-        isNull: false,
+        allowNull: false,
       },
       updated_at: {
         type: Sequelize.DATE,
-        isNull: false,
+        allowNull: false,
       },
     });
   },
