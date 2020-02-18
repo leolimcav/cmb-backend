@@ -4,6 +4,7 @@ import multer from 'multer';
 import ShippingCompanyController from './app/controllers/ShippingCompanyController';
 import DriverController from './app/controllers/DriverController';
 import ParcelController from './app/controllers/ParcelController';
+import CallerController from './app/controllers/CallerController';
 
 import uploadConfig from './config/upload';
 
@@ -26,5 +27,8 @@ routes.post(
 );
 
 routes.put('/companies/parcels/:id', ParcelController.update);
+
+routes.post('/parcels/:id/call', CallerController.create);
+routes.get('/parcels/call/:id', CallerController.show);
 
 export default routes;
