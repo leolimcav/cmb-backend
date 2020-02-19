@@ -18,4 +18,4 @@ class Driver extends Model {
   }
 }
 
-export default new Driver();
+export default Driver;
