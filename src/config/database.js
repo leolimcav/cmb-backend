@@ -3,16 +3,14 @@ require('dotenv').config({
 });
 
 module.exports = {
-  host: 'localhost',
+  host: process.env.PG_HOST || 'localhost',
   username: process.env.PG_USER,
   password: process.env.PG_PASSWORD,
   database: process.env.PG_DATABASE,
   port: process.env.PG_PORT,
-  production: {
-    use_env_variable: process.env.DATABASE_URL,
+  dialectOptions: {
+    ssl: true,
   },
-  dialect: process.env.DB_DIALECT || 'postgres',
-  storage: './__tests__/database.sqlite',
   define: {
     timestamps: true,
     underscored: true,
