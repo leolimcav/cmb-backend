@@ -20,5 +20,6 @@ module.exports = {
     'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
     'class-methods-use-this': 'off',
     'no-param-reassign': 'off',
+    'no-undef': 'off',
   },
 };

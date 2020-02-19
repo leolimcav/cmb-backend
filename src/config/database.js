@@ -8,6 +8,9 @@ module.exports = {
   password: process.env.PG_PASSWORD,
   database: process.env.PG_DATABASE,
   port: process.env.PG_PORT,
+  production: {
+    use_env_variable: DATABASE_URL,
+  },
   dialect: process.env.DB_DIALECT || 'postgres',
   storage: './__tests__/database.sqlite',
   define: {
