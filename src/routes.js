@@ -12,6 +12,10 @@ const upload = multer(uploadConfig);
 
 const routes = Router();
 
+routes.get('/', (req, res) => {
+  return res.json({ message: 'API RUNNING' });
+});
+
 routes.get('/companies/:id', ShippingCompanyController.show);
 
 routes.get('/companies/:id/drivers', DriverController.index);
